@@ -1,0 +1,109 @@
+/* catalogo.css */
+
+*{
+    text-decoration: none;
+    list-style-type: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+header{
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.header-content img {
+    max-width: 120px;
+    margin: 10px;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0.5em 0;
+    color: white;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.catalogo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.catalogo-item {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+    overflow: hidden; /* Ensures images stay within their box */
+}
+
+.catalogo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.catalogo-item a  {
+    color: black
+}
+
+.catalogo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.catalogo-item img:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content img {
+        max-width: 100px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content img {
+        max-width: 80px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .catalogo-item {
+        font-size: 0.9em;
+    }
+}
